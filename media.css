@@ -1,0 +1,808 @@
+@media screen and (max-width: 1035px) {
+
+    
+    .web-container {
+        overflow-x: hidden;
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        grid-template-areas:
+        "nav header header header header"
+        "nav trans trans trans trans"
+        "nav dealing dealing dealing dealing"
+        "nav cal cal cal cal";
+    }
+    .nav-menu a {
+        display: none;
+    }
+
+    .navbar .nav-menu .transactions {
+        display: none;
+    }
+
+    .navbar .caption {
+        display: none;
+    }
+
+    .navbar .margin {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 25px;
+    }
+
+    .navbar .image {
+        margin-right: 10px;
+    }
+
+    .navbar {
+        display: block;
+        width: 80px;
+        position: fixed;
+        min-height: 100vh;
+    }
+   
+   
+    .header .title .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #304EEF;
+        padding: 10px 10px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 4px 1px #CCDFFE;
+        margin-left: 10px;
+        position: relative;
+    }
+
+
+    .header .title p {
+        font-size: 12px;
+        font-weight: 600;
+        color: #4B5666;
+    }
+
+    .header .container {
+        display: flex;
+    }
+    .header{
+        margin-right: 15px;
+    }
+    .header .container .about {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .header .title h1 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .header .about .person .caption .name {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .header .about .search img {
+        width: 15px;
+    }
+
+    .header .container .search-noti {
+        justify-content: space-between;
+    }
+
+    .header .about .notifications img {
+        width: 15px;
+    }
+
+    .header .title .connect {
+        border-radius: 10px;
+        padding: 8px 8px 8px 40px;
+        width: 1%;
+        margin-right: 40px;
+    }
+
+    .header .title .connect::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: 15px;
+        right: 3px;
+        background-color: #00C950;
+        border-radius: 50%;
+    }
+
+    .transactionss .container {
+        display: flex;
+    }
+
+    .transactionss .current-balance {
+        width: 33.33%;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+
+    .transactionss .income {
+        width: 33.33%;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+
+    .transactionss .expense {
+        width: 33.33%;
+        margin-right: 20px;
+    }
+
+    .dealing .activities {
+        grid-area: activ;
+        width: 45%;
+        border-radius: 15px;
+        padding: 0px 20px;
+        box-shadow: 0px 0px 5px 2px #EBECED;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+   .transactionss .quantity {
+    font-size: 24px;
+    font-weight: 700;
+   }
+   .dealing .table table{
+    width: 100%;
+   }
+    .dealing {
+        transform: translateY(30px);
+        grid-area: dealing;
+        grid-template-columns: 340px auto;
+        margin-left: 20px;
+        display: grid;
+        grid-template-areas:
+            "activ activ"
+            "table table"
+            "bill bill";
+    }
+
+    .dealing .bill {
+        width: 45%;
+        margin-right: 20px;
+    }
+    .summary {
+        width: 95%;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .dealing .activities .activ1,
+    .dealing .activities .activ2 {
+        background-color: #EFF6FF;
+        padding: 20px;
+        border-radius: 15px;
+        margin: auto;
+        width: 95%;
+        position: relative;
+        margin-bottom: 10px;
+        height: fit-content;
+    }
+
+    .activities .operations {
+        display: flex;
+        align-items: center;
+    }
+
+    .dealing .activities .operations .type {
+        margin-right: auto;
+    }
+
+    .calculations {
+        grid-area: cal;
+        display: grid;
+        grid-template-areas:
+            "summary summary"
+            "overview means"
+            "compare compare";
+        padding-top: 50px;
+    }
+    .calculations .summary{
+        position: absolute;
+        width: 45%;
+        top: 1500px;
+        left: 15px;
+        margin-top: 20px;
+    }
+    .summary .card1 .where,
+        .summary .card2 .where,
+        .summary .card3 .where {
+            width: 155%;
+        }
+    .summary .price {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+  
+    .comparsion {
+        position: absolute;
+        top: 350px;
+        left: 20px;
+        height: 390px;
+        grid-area: compare;
+        width: 45%;
+        margin-bottom: 20px;
+
+        box-shadow: 0px 0px 4px 1px #E1E2E3;
+    }
+   
+    .comparsion .weeks {
+        padding-top: 40px;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .comparsion .pragraphs-weeks {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p.week1 {
+        margin-right: -2px;
+    }
+
+    .overview {
+        box-shadow: 0px 0px 4px 1px #E5E7EB;
+        grid-area: overview;
+        border-radius: 15px;
+        padding: 20px;
+        width: 75%;
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    .web-container .dealing{
+        position: relative;
+    }
+
+    .means {
+        width: 118%;
+        margin: auto;
+        margin-top: 20px;
+        margin-right: -80px;
+    }
+
+    .dealing .table table .history,
+    .dealing .table table .iscomplete,
+    .dealing .table table .result {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 942px){
+    .comparsion{
+        height: 375px;
+    }
+   .calculations .summary{
+        top: 1485px;
+    }
+}
+@media screen and (min-width: 972px){
+    .comparsion{
+        height: 357px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .web-container {
+        overflow-x: hidden;
+        display: grid;
+        grid-template-areas:
+            "header header header header"
+            "trans trans trans trans"
+            "dealing dealing dealing dealing"
+            "cal cal cal cal";
+    }
+
+
+    .header .image img {
+        width: 30px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+
+    .header .title .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #304EEF;
+        padding: 10px 10px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 4px 1px #CCDFFE;
+        margin-left: 10px;
+        position: relative;
+    }
+
+
+    .header .title p {
+        font-size: 12px;
+        font-weight: 600;
+        color: #4B5666;
+    }
+
+    .header .container {
+        display: flex;
+    }
+
+    .header .container .about {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .header .title h1 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .header .about .person .caption .name {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .header .about .search img {
+        width: 15px;
+    }
+
+    .header .container .search-noti {
+        justify-content: space-between;
+    }
+
+    .header .about .notifications img {
+        width: 15px;
+    }
+
+    .header .title .connect {
+        border-radius: 10px;
+        padding: 8px 8px 8px 40px;
+        width: 1%;
+        margin-right: 40px;
+    }
+
+    .header .title .connect::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: 15px;
+        right: 3px;
+        background-color: #00C950;
+        border-radius: 50%;
+    }
+
+    .transactionss .container {
+        display: block;
+    }
+
+    .transactionss .current-balance {
+        width: 98%;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+
+    .transactionss .income {
+        width: 98%;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+
+    .transactionss .expense {
+        width: 98%;
+        margin-right: 20px;
+    }
+
+    .dealing .activities {
+        grid-area: activ;
+        width: 97%;
+        border-radius: 15px;
+        padding: 0px 20px;
+        box-shadow: 0px 0px 5px 2px #EBECED;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .dealing {
+        transform: translateY(30px);
+        grid-area: dealing;
+        grid-template-columns: 340px auto;
+        margin-left: 20px;
+        display: grid;
+        grid-template-areas:
+            "activ activ"
+            "table table"
+            "bill bill";
+    }
+
+    .dealing .bill {
+        width: 97%;
+        margin-right: 20px;
+    }
+
+    .dealing .activities .activ1,
+    .dealing .activities .activ2 {
+        background-color: #EFF6FF;
+        padding: 20px;
+        border-radius: 15px;
+        margin: auto;
+        width: 95%;
+        position: relative;
+        margin-bottom: 10px;
+        height: fit-content;
+    }
+
+    .activities .operations {
+        display: flex;
+        align-items: center;
+    }
+
+    .dealing .activities .operations .type {
+        margin-right: auto;
+    }
+
+    .calculations {
+        grid-area: cal;
+        display: grid;
+        grid-template-areas:
+            "overview overview overview"
+            "compare compare compare"
+            "summary summary summary"
+            "means means means";
+        padding-top: 50px;
+    }
+
+    .summary .price {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .comparsion {
+        
+        grid-area: compare;
+        width: 95%;
+        box-shadow: 0px 0px 4px 1px #E1E2E3;
+        position: relative;
+        top: 0;
+        right: -5px;
+    }
+
+    .comparsion .weeks {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .comparsion .pragraphs-weeks {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p.week1 {
+        margin-right: -2px;
+    }
+
+    .overview {
+        box-shadow: 0px 0px 4px 1px #E5E7EB;
+        grid-area: overview;
+        border-radius: 15px;
+        padding: 20px;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+   .calculations .summary {
+        width: 95%;
+        margin: auto;
+        margin-top: 10px;
+        position: relative;
+       top: 0;
+        right: 2px;
+    }
+
+    .means {
+        width: 95%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .dealing .table table .history,
+    .dealing .table table .iscomplete,
+    .dealing .table table .result {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .web-container {
+        overflow-x: hidden;
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        grid-template-areas:
+            "header header header header"
+            "trans trans trans trans"
+            "dealing dealing dealing dealing"
+            "cal cal cal cal";
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .header .image img {
+        width: 30px;
+    }
+
+    .header {
+        margin-right: 20px;
+    }
+    .header .container {
+        display: block;
+        margin-left: 20px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px 80px;
+        border-radius: 15px;
+        box-shadow: 2px 2px 5px 3px #EBECED;
+    }
+
+    .header .container .about .person .name,
+    .header .container .about .person .ac {
+        display: none;
+    }
+
+    .header .container .search-noti {
+        display: flex;
+    }
+
+    .header .container .about {
+        justify-content: space-between;
+    }
+
+    .header .about .person {
+        display: block;
+        padding: 5px 5px;
+        box-shadow: 0px 0px 5px 1px #DEDFE2;
+        border-radius: 10px;
+    }
+
+    .header .title .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #304EEF;
+        padding: 10px 10px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 4px 1px #CCDFFE;
+        margin-left: 10px;
+        position: relative;
+    }
+
+    .header .title p {
+        font-size: 12px;
+        font-weight: 600;
+        color: #4B5666;
+    }
+
+    .header .title h1 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .header .about .person .caption .name {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .header .about .search img {
+        width: 15px;
+    }
+
+    .header .about .notifications img {
+        width: 15px;
+    }
+
+    .header .container {
+        position: relative;
+    }
+
+    .header .title .connect {
+        width: 70%;
+        border-radius: 10px;
+        padding: 5px 9px;
+        transform: translateY(400%);
+        position: absolute;
+        left: -5em;
+        right: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 8em;
+    }
+
+    .header .container .title .caption h1 {
+        font-size: 24px;
+    }
+
+    .header .container .title .caption p {
+        font-size: 12px;
+    }
+
+    .header .title .connect::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: 15px;
+        right: 3px;
+        background-color: #00C950;
+        border-radius: 50%;
+    }
+
+    .transactionss .container {
+        display: block;
+    }
+
+    .transactionss .current-balance {
+        width: 97%;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+    .transactionss .income {
+        width: 97%;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+    .transactionss .expense {
+        width: 97%;
+        margin-left: 30px;
+    }
+
+    .dealing .activities {
+        grid-area: activ;
+        width: 94%;
+        border-radius: 15px;
+        padding: 0px 20px;
+        box-shadow: 0px 0px 5px 2px #EBECED;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .dealing {
+        transform: translateY(30px);
+        grid-area: dealing;
+        margin-left: 20px;
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+            "activ activ"
+            "table table"
+            "bill bill";
+    }
+
+    .dealing .bill {
+        width: 97%;
+        margin-right: 20px;
+    }
+
+    .dealing .activities .activ1,
+    .dealing .activities .activ2 {
+        background-color: #EFF6FF;
+        padding: 20px;
+        border-radius: 15px;
+        margin: auto;
+        width: 95%;
+        position: relative;
+        margin-bottom: 10px;
+        height: fit-content;
+    }
+
+    .activities .operations {
+        display: flex;
+        align-items: center;
+    }
+
+    .dealing .activities .operations .type {
+        margin-right: auto;
+    }
+
+    .dealing .table {
+        width: 94%;
+        margin-left: 30px;
+    }
+
+    .dealing .bill {
+        width: 94%;
+        margin-left: 30px;
+    }
+
+    .calculations {
+        grid-area: cal;
+        display: grid;
+        grid-template-areas:
+            "overview overview overview"
+            "compare compare compare"
+            "summary summary summary"
+            "means means means";
+        padding-top: 50px;
+    }
+
+    .summary .price {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .comparsion {
+        grid-area: compare;
+        width: 95%;
+        margin-right: 20px;
+        box-shadow: 0px 0px 4px 1px #E1E2E3;
+        position: relative;
+    }
+
+    .comparsion .weeks {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .comparsion .pragraphs-weeks {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p.week1 {
+        margin-right: -2px;
+    }
+
+    .overview {
+        box-shadow: 0px 0px 4px 1px #E5E7EB;
+        grid-area: overview;
+        border-radius: 15px;
+        padding: 20px;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .summary,
+    .means {
+        width: 95%;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .dealing .table table .type {
+        margin-left: 10em;
+    }
+    .dealing .table table {
+        width: 130%;
+    }
+    .dealing .table table .history,
+    .dealing .table table .iscomplete,
+    .dealing .table table .result {
+        font-size: 12px;
+    }
+
+}

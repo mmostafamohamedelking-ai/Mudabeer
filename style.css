@@ -1,0 +1,1575 @@
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "IBM Plex Sans", sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .web-container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            grid-template-rows: auto auto 1fr;
+            grid-template-areas:
+                "nav header header header"
+                "nav trans trans trans"
+                "nav dealing dealing dealing"
+                "nav cal cal cal";
+        }
+
+        .navbar {
+            grid-area: nav;
+            width: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 30px;
+            box-shadow: 0px 0px 1px .1px black;
+            max-height: 100vh;
+            overflow: auto;
+            scrollbar-width: thin;
+            position: sticky;
+            top: 0;
+
+        }
+
+        .navbar .container {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .navbar .nav-head .image img {
+            width: 30px;
+        }
+
+        .navbar .nav-head .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #304EEF;
+            padding: 10px 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 0px 1px #304EEF;
+            margin-left: 10px;
+        }
+
+        .nav-head {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-head .caption {
+            margin-top: -10px;
+        }
+
+        .nav-head .caption .head {
+            font-size: 36px;
+            padding-right: 10px;
+            font-weight: 700;
+        }
+
+        .nav-head .caption .paragraph {
+            font-size: 600;
+            font-weight: 14px;
+            color: #4B5666;
+        }
+
+        .nav-menu {
+            padding-top: 20px;
+        }
+
+        .nav-menu img {
+            width: 23px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            margin-right: 20px;
+        }
+
+        .nav-menu a {
+            padding-right: 10px;
+            
+        }
+
+        .gray {
+            color: #4A5565;
+        }
+
+        .blue {
+            color: #1447E6;
+        }
+
+        .blue-li {
+            background-color: #EFF6FF;
+            padding: 10px;
+            border-radius: 10px;
+            border: #DBEAFE solid 1px;
+        }
+
+        .bg {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .transactions {
+            padding: 20px 15px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .sm {
+            font-size: 14px;
+            font-weight: 500;
+            color: black;
+        }
+
+        .nav-menu .imageblue,
+        .nav-menu .imagegreen,
+        .nav-menu .imagepurple,
+        .nav-menu .imagered {
+            background-color: #DBE8FC;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu .imagegreen {
+            background-color: #D4F3E1;
+        }
+
+        .nav-menu .imagepurple {
+            background-color: #F7EDFF;
+        }
+
+        .nav-menu .imagered {
+            background-color: #FBE4D4;
+        }
+
+        .header {
+            grid-area: header;
+            margin: 30px 0;
+        }
+        .header .container {
+            display: flex;
+            margin-left: 20px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10px;
+            border-radius: 15px;
+            box-shadow: 2px 2px 5px 3px #EBECED;
+        }
+        .header .title {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .image img{
+            width: 30px;
+        }
+
+        .header .title .image {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #304EEF;
+            padding: 15px 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 4px 1px #CCDFFE;
+            margin-left: 10px;
+            position: relative;
+        }
+
+        .header .title p {
+            font-size: 600;
+            font-weight: 14px;
+            color: #4B5666;
+        }
+        .header .container .search-noti{
+            display: flex;
+        }
+        .header .title .connect {
+            background-color: #F0FDF4;
+            border-radius: 10px;
+            padding: 10px 18px;
+            border: #DBFCE7 solid 1px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #008236;
+            position: relative;
+        }
+
+        .header .title .connect::after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            top: 16px;
+            right: 5px;
+            background-color: #00C950;
+            border-radius: 50%;
+            
+        }
+
+        .header .about .person {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0px 0px 5px 1px #DEDFE2;
+            border-radius: 10px;
+        }
+
+        .header .about .person .caption .name {
+            font-size: 14px;
+            font-weight: 600;
+
+        }
+
+        .header .about .person .caption .ac {
+            font-size: 12px;
+            font-weight: 600;
+            color: #6A7282;
+        }
+
+        .header .about .person .caption {
+            padding-left: 10px;
+        }
+
+        .header .about .image img {
+
+            width: 40px;
+            border-radius: 10px;
+        }
+
+        .header .about {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .about .search img {
+            width: 20px;
+        }
+
+        .header .about .search {
+            margin-left: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #E5E7EB;
+            border-radius: 10px;
+            padding: 6px 10px;
+        }
+
+        .header .about .notifications img {
+            width: 20px;
+        }
+
+        .header .about .notifications {
+            padding: 6px 10px;
+            display: flex;
+            align-items: center;
+            margin: 0px 10px 0px 20px;
+            border: 1px solid #E5E7EB;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .header .about .notifications::before {
+            content: "2";
+            display: grid;
+            place-items: center;
+            position: absolute;
+            font-size: 12px;
+            top: -5px;
+            right: -5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #FB2C36;
+            color: white;
+        }
+
+        .transactionss {
+            grid-area: trans;
+        }
+
+        .transactionss .container {
+            display: flex;
+            margin-left: 20px;
+        }
+
+        .transactionss .current-balance {
+            width: 33%;
+            height: fit-content;
+            box-shadow: 2px 2px 4px #DEDFE0;
+            margin-left: 15px;
+            border-radius: 15px;
+            padding: 20px;
+            padding-bottom: 30px;
+            border: #E7E8EC solid 1px;
+        }
+
+        .transactionss .income {
+            width: 33%;
+            height: fit-content;
+            box-shadow: 2px 2px 4px #DEDFE0;
+            margin-left: 15px;
+            border-radius: 15px;
+            padding: 20px;
+            padding-bottom: 30px;
+            border: #E7E8EC solid 1px;
+        }
+
+        .transactionss .expense {
+            width: 33%;
+            box-shadow: 2px 2px 4px #DEDFE0;
+            border-radius: 15px;
+            padding: 20px;
+
+            height: fit-content;
+            padding-bottom: 30px;
+            border: #E7E8EC solid 1px;
+
+        }
+
+        .transactionss img {
+            width: 15px;
+        }
+
+        .transactionss .result {
+            display: flex;
+            align-items: center;
+            color: #00A63E;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .transactionss .balance {
+            font-size: 14px;
+            font-weight: 600;
+            color: #6A7282;
+            padding-bottom: 10px;
+        }
+
+        .transactionss .quantity {
+            font-size: 36px;
+            font-weight: 700;
+            padding-bottom: 5px;
+        }
+
+        .transactionss .last-result {
+            color: #E7000B;
+        }
+
+        .dealing .activities {
+            grid-area: activ;
+            width: fit-content;
+            border-radius: 15px;
+            padding: 0px 20px;
+            box-shadow: 0px 0px 5px 2px #EBECED;
+            margin: auto;
+        }
+
+
+        .dealing .activities .first {
+            font-size: 18px;
+            font-weight: 600;
+            padding: 20px;
+        }
+
+
+        .dealing .activities .activ1,
+        .dealing .activities .activ2 {
+            background-color: #EFF6FF;
+            padding: 20px;
+            border-radius: 15px;
+            margin: auto;
+            width: fit-content;
+            position: relative;
+            margin-bottom: 10px;
+            height: fit-content;
+        }
+
+        .dealing .activities .activ1::after,
+        .activ2::after {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #2B7FFF;
+            border-radius: 15px;
+            z-index: -1;
+        }
+
+        .dealing .activities .activ1 .time,
+        .dealing .activities .activ2 .time {
+            color: #6A7282;
+            font-size: 12px;
+            font-weight: 600;
+            padding-right: 50px;
+            padding-top: 10px;
+        }
+
+        .activities .operations {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .operations .operate .ac {
+            font-size: 14px;
+            font-weight: 700;
+            padding-bottom: 6px;
+        }
+
+        .operations .operate {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .operations .type {
+            margin-right: -20px;
+            margin-top: -15px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #155DFC;
+        }
+
+        .operations .operate .finish {
+            font-size: 12px;
+            font-weight: 600;
+            color: #4A5565;
+        }
+
+        .dealing .activities .activ1 .image img,
+        .dealing .activities .activ2 .image img {
+            width: 25px;
+        }
+
+        .dealing .activities .activ1 .image,
+        .dealing .activities .activ2 .image {
+            padding: 6px;
+            background-color: #DBEAFE;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dealing .bill {
+            grid-area: bill;
+            
+        }
+
+        .dealing table {
+            grid-area: tab;
+            border-collapse: collapse;
+        }
+
+        .dealing {
+            transform: translateY(30px);
+            grid-area: dealing;
+            grid-template-columns:  340px auto;
+            margin-left: 20px;
+            display: grid;
+            grid-template-areas:
+                "activ table"
+                "bill table"
+                ;
+        }
+
+        .dealing .activities .activ2 {
+            background-color: #F0FDF4;
+        }
+
+        .dealing .activities .activ2::after {
+            background-color: #00C950;
+        }
+
+        .activ2::after {
+            background-color: #00A63E;
+        }
+
+        .activ2 .type {
+            color: #00A63E;
+        }
+
+        .dealing .activities .activ2 .image {
+            background-color: #DBFCE7;
+
+        }
+
+        .dealing .bill {
+            grid-area: bill;
+
+        }
+
+        .dealing .table {
+            grid-area: table;
+            margin-right: 20px;
+        }
+        .dealing .table table{
+            
+            border-collapse: collapse;
+        }
+
+        .dealing .line {
+            height: 1px;
+            width: 90%;
+            margin: auto;
+            background-color: #F3F4F6;
+        }
+
+        .dealing .all-activities {
+        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1447E6;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 20px;
+           
+        }
+
+        .dealing .bill {
+            width: 336px;
+            box-shadow: 0px 0px 5px 2px #EBECED;
+            border-radius: 15px;
+            margin-top: 20px;
+            padding: 15px;
+        }
+
+        .dealing .bill .operations {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .dealing .bill .operations .month {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .dealing .bill .operations .show {
+            font-size: 14px;
+            font-weight: 500;
+            color: #4A5565;
+            cursor: pointer;
+        }
+
+        .dealing .bill .price {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 15px;
+        }
+
+        .dealing .bill .price .pri {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .dealing .bill .price .total {
+            font-size: 14px;
+            font-weight: 600;
+            color: #6A7282;
+            margin-bottom: -5px;
+        }
+
+        .dealing .bill img {
+            width: 20px;
+        }
+
+        .bill .all-bills {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        .dealing .all-bills .bill-1,
+        .dealing .all-bills .bill-2,
+        .dealing .all-bills .bill-3,
+        .dealing .all-bills .bill-4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 45%;
+            background-color: #F9FAFB;
+            border-radius: 15px;
+            padding: 10px 20px;
+            border: #F3F4F6 solid 1.5px;
+        }
+
+        .dealing .all-bills .bill-1 .type,
+        .dealing .all-bills .bill-2 .type,
+        .dealing .all-bills .bill-3 .type,
+        .dealing .all-bills .bill-4 .type {
+            font-size: 14px;
+            margin-bottom: -17px;
+            font-weight: 600;
+            color: #6A7282;
+        }
+
+        .dealing .all-bills .bill-1 .time,
+        .dealing .all-bills .bill-2 .time,
+        .dealing .all-bills .bill-3 .time {
+            color: #FF6900;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .dealing .all-bills .bill-4 .time {
+            font-size: 12px;
+            font-weight: 600;
+            color: #6A7282;
+        }
+
+        .dealing .all-bills .bill-3 .time {
+            color: #00C950;
+        }
+
+        .dealing .all-bills .bill-1 .price,
+        .dealing .all-bills .bill-2 .price,
+        .dealing .all-bills .bill-3 .price,
+        .dealing .all-bills .bill-4 .price {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .dealing .all-bills .bill-1 .image,
+        .dealing .all-bills .bill-2 .image,
+        .dealing .all-bills .bill-3 .image,
+        .dealing .all-bills .bill-4 .image {
+            border-radius: 10px;
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            padding: 7px;
+            display: flex;
+            align-items: center;
+        }
+
+        .dealing .all-bills .bill-1 .image {
+            background-color: #DBEAFE;
+        }
+
+        .dealing .all-bills .bill-2 .image {
+            background-color: #FEF9C2;
+        }
+
+        .dealing .all-bills .bill-3 .image {
+
+            background-color: #DBFCE7;
+        }
+
+        .dealing .all-bills .bill-4 .image {
+            background-color: #FFE2E2;
+
+        }
+
+        .dealing .all-bills .bill-2,
+        .dealing .all-bills .bill-4 {
+            margin-right: 20px;
+            height: fit-content;
+
+        }
+
+        .dealing .all-bills .bill-1 {
+
+            height: fit-content;
+        }
+
+        .dealing .all-bills .bill-3 {
+            margin-top: 10px;
+        }
+
+        .dealing .all-bills .bill-4 {
+            height: fit-content;
+            margin-right: 20px;
+            margin-top: 10px;
+
+        }
+
+        .dealing .table .caption {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dealing .table .caption .show {
+            color: #505565;
+            cursor: pointer;
+            margin-top: -30px;
+        }
+
+        .dealing .table .caption .title-section {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .dealing .table table{
+            width: 120%;
+        }
+        .dealing .table .caption{
+            width: 100%;
+            position: sticky;
+            right: 0;
+        }
+        .dealing .table{
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0px 0px 3px #E5E7EB;
+            border: #ECEDEF solid 1px;
+            height: fit-content;
+            overflow-x: auto;
+            scrollbar-width: thin;
+         }
+
+        .dealing .table table td {
+            margin-top: 10px;
+            padding-bottom: 20px;
+            border-bottom: #F3F4F6 1px solid;
+           
+        }
+
+        .dealing .table table thead td {
+            font-size: 14px;
+            font-weight: 600;
+            color: #364153;
+        }
+
+        .dealing .table table img {
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        .dealing .table table .deal {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .dealing .table table .deal .caption {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-right: 20px;
+        }
+
+        .dealing .table table .deal .caption .name {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .dealing .table table .deal .caption .type-transform {
+            font-size: 12px;
+            font-weight: 600;
+            color: #888F9B;
+        }
+
+        .dealing .table table .type img {
+            width: 15px;
+            margin-left: 5px;
+        }
+         .dealing .table table .type{
+
+            width: 22%;
+         }
+        .dealing .table table .type span {
+            background-color: #DBFCE7;
+            color: #016630;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 30px;
+            width: fit-content;
+            display: flex;
+        }
+        .dealing .table table .type-orange span{
+            background-color: #FFEDD4;
+            color: #9F2D00;
+        }
+        .dealing .table table .type-blue span{
+            background-color: #DBEAFE;
+            color: #193CB8;
+        }
+        .dealing .table table .type-purple span{
+            background-color: #F3E8FF;
+            color: #6E11B0;
+        }
+        .dealing .table table .type-red span{
+            background-color: #FFE2E2;
+            color: #9F0712;
+        }
+        .dealing .table table .type-last-blue span{
+            background-color: #E0E7FF;
+            color: #3C30AF;
+        }
+        .dealing .table table .type-light-blue span{
+            background-color: #CEFAFE;
+            color: #005F78;
+        }
+
+        .dealing .table table .history {
+            font-size: 14px;
+            font-weight: 600;
+            color: #4A5565;
+            width: 17%;
+        }
+
+        .dealing .table table .iscomplete {
+            width: 18%;
+            background-color: #DBFCE7;
+            color: #016630;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 30px;
+            width: fit-content;
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .dealing .table table .iscomplete-yellow{
+            background-color: #FEF9C2;
+            color: #894B00;
+        }
+
+        .dealing .table table .result {
+            font-size: 14px;
+            font-weight: 600;
+            color: black;
+        }
+        .dealing .table table .result-green{
+            color: #00A63E;
+        }
+        .dealing .table table .deal .orange{
+            background-color: #FFEDD4;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .dealing .table table .deal .blue{
+            
+            background-color: #DBEAFE;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .dealing .table table .deal .red{
+            
+            background-color: #FFE2E2;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .dealing .table table .deal .last-blue{
+            
+            background-color: #E0E7FF;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .dealing .table table .deal .light-blue{
+            
+            background-color: #CEFAFE;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .dealing .table table .deal .last-green{
+            
+            background-color: #D0FAE5;
+            padding: 10px;
+            border-radius: 50%;
+        }
+          .dealing .table table .deal .image-change{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+        .dealing .table table .deal .image-change img{
+            width: 20px;
+        }
+        .calculations {
+            grid-area: cal;
+            display: grid;
+            grid-template-areas:
+                "overview compare means"
+                "overview summary means"
+                "overview . .";
+            padding-top: 50px;
+        }
+
+        .overview {
+            box-shadow: 0px 0px 4px 1px #E5E7EB;
+            grid-area: overview;
+            border-radius: 15px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .comparsion {
+            grid-area: compare;
+            width: fit-content;
+            box-shadow: 0px 0px 4px 1px #E1E2E3;
+            position: relative;
+            margin-right: 10px;
+        }
+
+        .overview .caption-first {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .overview .card1 .caption-first {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .overview .card1 .caption-first p {
+            font-size: 14px;
+            font-weight: 500;
+            color: #4A5565;
+        }
+
+        .overview .card1,
+        .overview .card2,
+        .overview .card3,
+        .overview .card4,
+        .overview .card5 {
+            background-color: #EEF5FF;
+            padding: 10px;
+            border-radius: 15px;
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+            border: #DBEAFE solid 1px;
+        }
+
+        .overview .card1 .money {
+            color: #155DFC;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .overview .card1 .explain {
+            color: #1C398E;
+            font-size: 24px;
+            font-weight: 700;
+            padding-top: 5px;
+        }
+
+        .overview .remain,
+        .overview .remain-money,
+        .overview .remain,
+        .overview .remain-percentage {
+            text-align: left;
+        }
+
+        .overview .card1 .remain,
+        .overview .card2 .remain {
+            font-size: 14px;
+            font-weight: 600;
+            color: #6A7282;
+            padding-left: 30px;
+        }
+
+        .overview .card2 .remain {
+            color: #101828;
+        }
+
+        .overview .remain {
+            padding-left: 20px;
+        }
+
+        .overview .card1 .using {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+
+        .overview .card1 .using .per,
+        .overview .card1 .using .user,
+        .overview .title .money {
+            font-size: 12px;
+            font-weight: 600;
+            color: oklch(0.446 0.03 256.802);
+
+        }
+
+        .overview .card1 .remain-money {
+            font-size: 18px;
+            font-weight: 600;
+            color: #00A63E;
+        }
+
+        .overview .percentage {
+            margin: auto;
+            width: 90%;
+            height: 8px;
+            background-color: #E5E7EB;
+            border-radius: 15px;
+            margin-top: 15px;
+            position: relative;
+        }
+
+        .overview .card1 .percentage::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 30px;
+            right: 0;
+            bottom: 0;
+            border-radius: 15px;
+            background-image: linear-gradient(90deg, #6060FF, #3C78FF);
+
+        }
+
+        .overview .card2,
+        .overview .card3,
+        .overview .card4,
+        .overview .card5 {
+            background-color: #FCFCFD;
+        }
+
+        .overview .title {
+            display: flex;
+        }
+
+        .overview .title .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F54900;
+            background-color: #FFEDD4;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 5px 5px 0px 10px;
+        }
+
+        .overview .title .enthusiasm {
+            color: #101828;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .overview .remain-percentage {
+            background-color: #DCFCE7;
+            width: fit-content;
+            margin-right: auto;
+            margin-top: 5px;
+            padding: 5px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .overview .remain-percentage {
+            color: #166C51;
+
+        }
+
+        .summary {
+            grid-area: summary;
+        }
+
+
+        .means {
+            grid-area: means;
+        }
+
+        .overview .card2 .percentage::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 60%;
+            right: 0;
+            bottom: 0;
+            border-radius: 15px;
+            background-color: #FF6900;
+        }
+
+        .overview .card3 .image {
+            background-color: #FEE2E2;
+            padding: 10px;
+            border-radius: 10px;
+            color: #E7000B;
+        }
+
+        .overview .card3 .remain,
+        .overview .card3 .remain-percentage {
+            text-align: left;
+        }
+
+        .overview .card3 .remain {
+            font-weight: 600;
+        }
+
+        .overview .card3 .remain-percentage {
+            background-color: #FEE2E2;
+            color: #991B1B;
+        }
+
+        .overview .card3 .percentage::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 15px;
+            background-color: #FB2C36;
+        }
+
+        .overview .card4 .image {
+            color: #E60076;
+            background-color: #FCE7F3;
+        }
+
+        .overview .card4 .remain,
+        .overview .card5 .remain {
+            font-weight: 600;
+        }
+
+        .overview .card4 .remain-percentage {
+            background-color: #FEF3C7;
+            color: #92400E;
+        }
+
+        .overview .card4 .percentage::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            left: 40px;
+            border-radius: 15px;
+            background-color: #F6339A;
+        }
+
+        .overview .card5 .image {
+            color: #00A63E;
+            background-color: #DCFCE7;
+        }
+
+        .overview .card5 .percentage::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            left: 30px;
+            border-radius: 15px;
+            background-color: #00C950;
+        }
+
+        .comparsion {
+            box-shadow: 0px 0px 5px 1px #F0F1F2;
+            padding: 15px;
+            border-radius: 15px;
+            margin-right: 25px;
+            width: 280px;
+        }
+
+        .comparsion .caption {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .comparsion .caption h3 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .comparsion .caption p {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .comparsion .income {
+            display: flex;
+            align-items: center;
+        }
+
+        .comparsion .outcome {
+            display: flex;
+            align-items: center;
+        }
+
+        .comparsion .comes {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 20px;
+            padding-bottom: 60px;
+        }
+
+        .comparsion .income .color,
+        .comparsion .outcome .color {
+            width: 15px;
+            height: 15px;
+            background-color: #10B981;
+            border-radius: 5px;
+        }
+
+        .comparsion .income p,
+        .comparsion .outcome p {
+            margin-right: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            color: rgb(100, 116, 139);
+        }
+
+        .comparsion .outcome .color {
+            background-color: #EF4444;
+        }
+
+        .comparsion .week1,
+        .comparsion .week2,
+        .comparsion .week3,
+        .comparsion .week4 {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .comparsion .week1 .color1,
+        .comparsion .week2 .color1,
+        .comparsion .week3 .color1,
+        .comparsion .week4 .color1 {
+            background-color: #10B981;
+            margin-right: 30px;
+        }
+
+        .comparsion .week1 .color1 {
+            margin-right: 0;
+        }
+
+        .comparsion .week1 .color1 {
+            height: 100px;
+            width: 15px;
+            border-radius: 3px;
+        }
+
+        .comparsion .week1 .color2 {
+            height: 40px;
+            width: 15px;
+            border-radius: 3px;
+        }
+
+        .comparsion .week2 .color1 {
+            height: 110px;
+            width: 15px;
+            border-radius: 3px;
+        }
+
+        .comparsion .week2 .color2 {
+            height: 45px;
+            width: 15px;
+            border-radius: 3px;
+        }
+
+        .comparsion .week3 .color1 {
+            height: 95px;
+            width: 15px;
+            border-radius: 3px;
+        }
+
+        .comparsion .week3 .color2 {
+            height: 30px;
+            width: 15px;
+            border-radius: 3px;
+        }
+
+        .comparsion .week4 .color1 {
+            height: 105px;
+            width: 15px;
+            border-radius: 3px;
+        }
+
+        .comparsion .week4 .color2 {
+            height: 45px;
+            width: 15px;
+            border-radius: 3px;
+        }
+
+        .comparsion .week1 .color2,
+        .comparsion .week2 .color2,
+        .comparsion .week3 .color2,
+        .comparsion .week4 .color2 {
+            background-color: #EF4444;
+            margin-right: 3px;
+        }
+
+        .weeks {
+            display: flex;
+            width: 95%;
+            margin: auto;
+        }
+
+        p.week1,
+        p.week2,
+        p.week3,
+        p.week4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: #647DA1;
+            margin-right: 15px;
+            padding-top: 6px;
+            padding-bottom: 30px;
+
+        }
+
+        p.week1 {
+            margin-right: 8px;
+        }
+
+        .pragraphs-weeks {
+            display: flex;
+        }
+
+        .summary {
+            margin-right: 25px;
+            margin-top: 15px;
+            box-shadow: 0px 0px 5px 1px #F0F1F2;
+            padding: 15px;
+            border-radius: 15px;
+            width: 280px;
+        }
+
+        .summary .caption {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .summary .caption h3 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .summary .caption p {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .summary .card1 .image,
+        .summary .card2 .image,
+        .summary .card3 .image {
+            color: #155DFC;
+            background-color: #DBEAFE;
+            border-radius: 5px;
+            padding: 10px;
+            margin-left: 10px;
+        }
+
+        .summary .card2 .image {
+            color: #00A63E;
+            background-color: #DBFCE7;
+        }
+
+        .summary .card3 .image {
+            color: #9810FA;
+            background-color: #F3E8FF;
+        }
+
+        .summary .card1,
+        .summary .card2,
+        .summary .card3 {
+            border-radius: 10px;
+            width: 95%;
+            margin: auto;
+            background-color: #F9FAFB;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .summary .card3 {
+            margin-bottom: 30px;
+        }
+
+        .summary .card1 .name,
+        .summary .card2 .name,
+        .summary .card3 .name {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .summary .card1 .where,
+        .summary .card2 .where,
+        .summary .card3 .where {
+            font-size: 12px;
+            font-weight: 600;
+            color: #6A7282;
+            width: 60%;
+        }
+
+        .summary .card1 .price,
+        .summary .card2 .price,
+        .summary .card3 .price {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .summary .card3 .price {
+            color: #E7000B;
+        }
+
+        .means {
+            box-shadow: 0px 0px 5px 1px #F0F1F2;
+            padding: 15px;
+            border-radius: 15px;
+            width: 280px;
+        }
+
+        .means .caption {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .means .caption h3 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .means .caption p {
+            font-size: 14px;
+            font-weight: 500;
+            color: #4A5565;
+        }
+
+        .means .card1 , .means .card2  , .means .card3 {
+            background-color: #372AAC;
+            border-radius: 15px;
+            padding: 25px;
+            width: 95%;
+            margin: auto;
+            margin-top: 20px;
+            color: white;
+            position: relative;
+        }
+
+        .means .card1::after,
+        .means .card1::before {
+            content: "أساسيه";
+            position: absolute;
+            width: 30px;
+            background-color: transparent;
+            /* opacity: .7; */
+            height: 10px;
+            padding: 10px;
+            border-radius: 15px;
+            left: 20px;
+            top: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .means .card1::before {
+            content: "";
+            background-color: #9F99D7;
+            opacity: .7;
+        }
+
+        .means .pictures {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .means .image1 {
+            background-color: #5F55BD;
+            width: 50px;
+            height: 30px;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .means .image1 .inside {
+
+            background-color: #9F99D7;
+            width: 25px;
+            height: 15px;
+            border-radius: 5px;
+        }
+
+        .means .image2 {
+            font-size: 30px;
+            color: white;
+        }
+
+        .means .dot {
+            font-size: 35px;
+            color: white;
+            font-weight: 900;
+            padding-top: 20px;
+        }
+
+        .means .number {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .means .info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .means .info .name {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .means .info .who-has {
+            color: #D9E8FD;
+        }
+
+        .means .finishing .finish {
+            font-size: 12px;
+            color: #D9E8FD;
+        }
+        .means .card2{
+            background-color: #C70036;
+        }
+          .means .card2 .image1 {
+            background-color: #D2335E;
+          } 
+          .means .card2 .image1 .inside{
+            background-color: #E4859E;
+          }
+          .means .card3 .number{
+            padding-top: 15px;
+            padding-bottom: 20px;
+          }
+          .means .card3 .finishing .trusted{
+            color:#00C950;
+            font-size: 12px;
+          }
+          .means .card3{
+            background-color: #193CB8;
+          }
