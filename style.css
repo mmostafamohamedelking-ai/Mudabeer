@@ -40,13 +40,19 @@
             flex-direction: column;
             align-items: center;
             padding-top: 30px;
-            box-shadow: 0px 0px 1px .1px black;
+            box-shadow: 0px 0px 5px 1px #E5E7EB;
             max-height: 100vh;
             overflow: auto;
             scrollbar-width: thin;
+
             position: sticky;
             top: 0;
 
+        }
+
+        * {
+            scrollbar-color: #F1F2F3 transparent;
+            scrollbar-width: thin;
         }
 
         .navbar .container {
@@ -104,11 +110,35 @@
             align-items: center;
             margin-bottom: 30px;
             margin-right: 20px;
+
+        }
+
+        .navbar .nav-menu ul .BG {
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .navbar .nav-menu ul .BG:hover {
+            background-color: #F9FAFB;
+        }
+
+        .navbar .nav-menu ul .Pos {
+            position: relative;
+            left: 0;
+            transition: 250ms;
+            cursor: pointer;
+            padding: 7px;
+        }
+
+        .navbar .nav-menu ul .Pos:hover {
+            background-color: #FAFAFA;
+            left: 5px;
         }
 
         .nav-menu a {
             padding-right: 10px;
-            
+
         }
 
         .gray {
@@ -169,7 +199,9 @@
         .header {
             grid-area: header;
             margin: 30px 0;
+            position: relative;
         }
+
         .header .container {
             display: flex;
             margin-left: 20px;
@@ -179,12 +211,13 @@
             border-radius: 15px;
             box-shadow: 2px 2px 5px 3px #EBECED;
         }
+
         .header .title {
             display: flex;
             align-items: center;
         }
 
-        .header .image img{
+        .header .image img {
             width: 30px;
         }
 
@@ -206,9 +239,17 @@
             font-weight: 14px;
             color: #4B5666;
         }
-        .header .container .search-noti{
+
+        .header .container .search-noti {
             display: flex;
         }
+
+        .header .search-noti .search:hover,
+        .header .search-noti .notifications {
+            background-color: #FAFAFA;
+            cursor: pointer;
+        }
+
         .header .title .connect {
             background-color: #F0FDF4;
             border-radius: 10px;
@@ -220,6 +261,26 @@
             position: relative;
         }
 
+        .bill .operations .show:hover,
+        .web-container .table .caption .show:hover,
+        .calculations .caption-first p:hover,
+        .comparsion .caption p:hover,
+        .summary .caption p:hover,
+        .means .caption p:hover {
+            color: #101828;
+            cursor: pointer;
+        }
+
+        .bill .operations .show,
+        .table .caption .show,
+        .calculations .caption-first p,
+        .comparsion .caption p,
+        .summary .caption p,
+        .means .caption p {
+            transition: 100ms;
+            color: #4A5565;
+        }
+
         .header .title .connect::after {
             content: "";
             position: absolute;
@@ -229,7 +290,7 @@
             right: 5px;
             background-color: #00C950;
             border-radius: 50%;
-            
+
         }
 
         .header .about .person {
@@ -481,7 +542,7 @@
 
         .dealing .bill {
             grid-area: bill;
-            
+
         }
 
         .dealing table {
@@ -492,13 +553,13 @@
         .dealing {
             transform: translateY(30px);
             grid-area: dealing;
-            grid-template-columns:  340px auto;
+            grid-template-columns: 340px auto;
             margin-left: 20px;
             display: grid;
             grid-template-areas:
                 "activ table"
                 "bill table"
-                ;
+            ;
         }
 
         .dealing .activities .activ2 {
@@ -531,8 +592,9 @@
             grid-area: table;
             margin-right: 20px;
         }
-        .dealing .table table{
-            
+
+        .dealing .table table {
+
             border-collapse: collapse;
         }
 
@@ -544,7 +606,7 @@
         }
 
         .dealing .all-activities {
-        
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -553,7 +615,7 @@
             font-weight: 500;
             cursor: pointer;
             padding: 20px;
-           
+
         }
 
         .dealing .bill {
@@ -737,15 +799,17 @@
             margin-bottom: 20px;
         }
 
-        .dealing .table table{
+        .dealing .table table {
             width: 120%;
         }
-        .dealing .table .caption{
+
+        .dealing .table .caption {
             width: 100%;
             position: sticky;
             right: 0;
         }
-        .dealing .table{
+
+        .dealing .table {
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0px 0px 3px #E5E7EB;
@@ -753,13 +817,13 @@
             height: fit-content;
             overflow-x: auto;
             scrollbar-width: thin;
-         }
+        }
 
         .dealing .table table td {
             margin-top: 10px;
             padding-bottom: 20px;
             border-bottom: #F3F4F6 1px solid;
-           
+
         }
 
         .dealing .table table thead td {
@@ -802,10 +866,12 @@
             width: 15px;
             margin-left: 5px;
         }
-         .dealing .table table .type{
+
+        .dealing .table table .type {
 
             width: 22%;
-         }
+        }
+
         .dealing .table table .type span {
             background-color: #DBFCE7;
             color: #016630;
@@ -816,27 +882,33 @@
             width: fit-content;
             display: flex;
         }
-        .dealing .table table .type-orange span{
+
+        .dealing .table table .type-orange span {
             background-color: #FFEDD4;
             color: #9F2D00;
         }
-        .dealing .table table .type-blue span{
+
+        .dealing .table table .type-blue span {
             background-color: #DBEAFE;
             color: #193CB8;
         }
-        .dealing .table table .type-purple span{
+
+        .dealing .table table .type-purple span {
             background-color: #F3E8FF;
             color: #6E11B0;
         }
-        .dealing .table table .type-red span{
+
+        .dealing .table table .type-red span {
             background-color: #FFE2E2;
             color: #9F0712;
         }
-        .dealing .table table .type-last-blue span{
+
+        .dealing .table table .type-last-blue span {
             background-color: #E0E7FF;
             color: #3C30AF;
         }
-        .dealing .table table .type-light-blue span{
+
+        .dealing .table table .type-light-blue span {
             background-color: #CEFAFE;
             color: #005F78;
         }
@@ -860,7 +932,8 @@
             display: inline-block;
             margin-left: 20px;
         }
-        .dealing .table table .iscomplete-yellow{
+
+        .dealing .table table .iscomplete-yellow {
             background-color: #FEF9C2;
             color: #894B00;
         }
@@ -870,53 +943,63 @@
             font-weight: 600;
             color: black;
         }
-        .dealing .table table .result-green{
+
+        .dealing .table table .result-green {
             color: #00A63E;
         }
-        .dealing .table table .deal .orange{
+
+        .dealing .table table .deal .orange {
             background-color: #FFEDD4;
             padding: 10px;
             border-radius: 50%;
         }
-        .dealing .table table .deal .blue{
-            
+
+        .dealing .table table .deal .blue {
+
             background-color: #DBEAFE;
             padding: 10px;
             border-radius: 50%;
         }
-        .dealing .table table .deal .red{
-            
+
+        .dealing .table table .deal .red {
+
             background-color: #FFE2E2;
             padding: 10px;
             border-radius: 50%;
         }
-        .dealing .table table .deal .last-blue{
-            
+
+        .dealing .table table .deal .last-blue {
+
             background-color: #E0E7FF;
             padding: 10px;
             border-radius: 50%;
         }
-        .dealing .table table .deal .light-blue{
-            
+
+        .dealing .table table .deal .light-blue {
+
             background-color: #CEFAFE;
             padding: 10px;
             border-radius: 50%;
         }
-        .dealing .table table .deal .last-green{
-            
+
+        .dealing .table table .deal .last-green {
+
             background-color: #D0FAE5;
             padding: 10px;
             border-radius: 50%;
         }
-          .dealing .table table .deal .image-change{
+
+        .dealing .table table .deal .image-change {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-          }
-        .dealing .table table .deal .image-change img{
+        }
+
+        .dealing .table table .deal .image-change img {
             width: 20px;
         }
+
         .calculations {
             grid-area: cal;
             display: grid;
@@ -971,6 +1054,18 @@
             margin: auto;
             margin-top: 20px;
             border: #DBEAFE solid 1px;
+            position: relative;
+            bottom: 0;
+            transition: 250ms;
+        }
+
+        .overview .card5:hover,
+        .overview .card2:hover,
+        .overview .card3:hover,
+        .overview .card4:hover {
+            background-color: #F5F6F8;
+            box-shadow: 0px 0px 5px 1px #E5E7EB;
+            bottom: 5px;
         }
 
         .overview .card1 .money {
@@ -1257,6 +1352,8 @@
         .comparsion .week4 .color1 {
             background-color: #10B981;
             margin-right: 30px;
+            transition: 150ms;
+
         }
 
         .comparsion .week1 .color1 {
@@ -1266,49 +1363,54 @@
         .comparsion .week1 .color1 {
             height: 100px;
             width: 15px;
-            border-radius: 3px;
+            border-radius: 3px 3px 0px 0px;
         }
 
         .comparsion .week1 .color2 {
             height: 40px;
             width: 15px;
-            border-radius: 3px;
+            border-radius: 3px 3px 0px 0px;
         }
 
         .comparsion .week2 .color1 {
             height: 110px;
             width: 15px;
-            border-radius: 3px;
+            border-radius: 3px 3px 0px 0px;
         }
 
         .comparsion .week2 .color2 {
             height: 45px;
             width: 15px;
-            border-radius: 3px;
+            border-radius: 3px 3px 0px 0px;
+
         }
 
         .comparsion .week3 .color1 {
             height: 95px;
             width: 15px;
-            border-radius: 3px;
+            border-radius: 3px 3px 0px 0px;
+
         }
 
         .comparsion .week3 .color2 {
             height: 30px;
             width: 15px;
-            border-radius: 3px;
+            border-radius: 3px 3px 0px 0px;
+
         }
 
         .comparsion .week4 .color1 {
             height: 105px;
             width: 15px;
-            border-radius: 3px;
+            border-radius: 3px 3px 0px 0px;
+
         }
 
         .comparsion .week4 .color2 {
             height: 45px;
             width: 15px;
-            border-radius: 3px;
+            border-radius: 3px 3px 0px 0px;
+
         }
 
         .comparsion .week1 .color2,
@@ -1317,6 +1419,15 @@
         .comparsion .week4 .color2 {
             background-color: #EF4444;
             margin-right: 3px;
+            transition: 150ms;
+        }
+
+        .comparsion .color1:hover {
+            background-color: #40C79A;
+        }
+
+        .comparsion .color2:hover {
+            background-color: #F26464;
         }
 
         .weeks {
@@ -1457,15 +1568,17 @@
             color: #4A5565;
         }
 
-        .means .card1 , .means .card2  , .means .card3 {
+        .means .card1,
+        .means .card2,
+        .means .card3 {
+            position: relative;
             background-color: #372AAC;
-            border-radius: 15px;
+            border-radius: 10px;
             padding: 25px;
-            width: 95%;
-            margin: auto;
             margin-top: 20px;
             color: white;
-            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
         }
 
         .means .card1::after,
@@ -1474,7 +1587,6 @@
             position: absolute;
             width: 30px;
             background-color: transparent;
-            /* opacity: .7; */
             height: 10px;
             padding: 10px;
             border-radius: 15px;
@@ -1553,23 +1665,29 @@
             font-size: 12px;
             color: #D9E8FD;
         }
-        .means .card2{
+
+        .means .card2 {
             background-color: #C70036;
         }
-          .means .card2 .image1 {
+
+        .means .card2 .image1 {
             background-color: #D2335E;
-          } 
-          .means .card2 .image1 .inside{
+        }
+
+        .means .card2 .image1 .inside {
             background-color: #E4859E;
-          }
-          .means .card3 .number{
+        }
+
+        .means .card3 .number {
             padding-top: 15px;
             padding-bottom: 20px;
-          }
-          .means .card3 .finishing .trusted{
-            color:#00C950;
+        }
+
+        .means .card3 .finishing .trusted {
+            color: #00C950;
             font-size: 12px;
-          }
-          .means .card3{
+        }
+
+        .means .card3 {
             background-color: #193CB8;
-          }
+        }

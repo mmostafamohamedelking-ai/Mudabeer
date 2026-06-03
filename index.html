@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
+        <link rel="icon" href="imgs/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
 </head>
@@ -19,7 +20,7 @@
 <body>
 
     <div class="web-container">
-        
+
         <div class="navbar">
             <div class="container">
                 <div class="nav-head">
@@ -34,30 +35,35 @@
 
                 <div class="nav-menu">
                     <ul>
-                        <li class="blue-li margin"><img src="imgs/house-solid-full.png" alt="House Image"><a href=""
-                                class="blue bg">الصفحه الرئيسيه</a></li>
-                        <li><img src="imgs/arrow-right-arrow-left-solid-full.png" alt="deals"><a href=""
-                                class="gray bg">المعاملات</a></li>
-                        <li><img src="imgs/chart-pie-solid-full.png" alt="mezania"><a href=""
-                                class="gray bg">الميزانيات</a></li>
-                        <li><img src="imgs/piggy-bank-solid.png" alt="piggy"><a href="" class="gray bg">المدخرات</a>
+                        <li class="blue-li margin">
+                            <img src="imgs/house-solid-full.png" alt="House Image"><a href="" class="blue bg">الصفحه
+                                الرئيسيه</a>
+
                         </li>
-                        <li><img src="imgs/file-invoice-dollar-solid-full.png" alt="file-dollars"><a href=""
+                        <li class="BG"><img src="imgs/arrow-right-arrow-left-solid-full.png" alt="deals"><a href=""
+                                class="gray bg">المعاملات</a></li>
+                        <li class="BG"><img src="imgs/chart-pie-solid-full.png" alt="mezania"><a href=""
+                                class="gray bg">الميزانيات</a></li>
+                        <li class="BG"><img src="imgs/piggy-bank-solid.png" alt="piggy"><a href=""
+                                class="gray bg">المدخرات</a>
+                        </li>
+                        <li class="BG"><img src="imgs/file-invoice-dollar-solid-full.png" alt="file-dollars"><a href=""
                                 class="gray bg">الفواتير الشهريه</a></li>
                         <p class="transactions">اجراءات سريعه</p>
-                        <li class="margin">
+
+                        <li class="margin Pos">
                             <div class="imageblue"><img src="imgs/paper-plane-solid-full.png" alt="Paper-plane"></div><a
                                 href="" class="sm">ارسال اموال</a>
                         </li>
-                        <li class="margin">
+                        <li class="margin Pos">
                             <div class="imagegreen"><img src="imgs/plus-solid-full.png" alt="Plus-image"></div><a
                                 href="" class="sm">اضافه اموال</a>
                         </li>
-                        <li class="margin">
+                        <li class="margin Pos">
                             <div class="imagepurple"><img src="imgs/receipt-solid-full.png" alt="receipt-image"></div><a
                                 href="" class="sm">دفع فاتوره </a>
                         </li>
-                        <li class="margin">
+                        <li class="margin Pos">
                             <div class="imagered"><img src="imgs/chart-line-solid-full.png" alt="chart-line-image">
                             </div><a href="" class="sm">استثمار</a>
                         </li>
@@ -179,7 +185,7 @@
                 <p class="all-activities">عرض جميع الانشطه (23)</p>
 
             </div>
-
+            <!-- Bill operations show  -->
             <div class="bill">
 
                 <div class="operations">
@@ -230,6 +236,7 @@
                 </div>
 
             </div>
+            <!-- table table caption show -->
             <div class="table">
                 <div class="caption">
                     <h2 class="title-section">المعاملات الاخيره</h2>
@@ -556,7 +563,7 @@
                 </table>
             </div>
         </div>
-
+        <!-- calculations caption-first p -->
         <div class="calculations">
             <div class="overview">
 
@@ -672,7 +679,7 @@
                     <div class="percentage"></div>
                 </div>
             </div>
-
+            <!-- comparsion caption p -->
             <div class="comparsion">
                 <div class="caption">
                     <h3>الدخل مقابل المصروفات</h3>
@@ -698,16 +705,21 @@
 
                         </div>
                     </div>
+                    <pre></pre>
+
                     <div class="week2">
                         <div class="color1"></div>
+                        <pre></pre>
                         <div class="color2"></div>
                     </div>
                     <div class="week3">
                         <div class="color1"></div>
+                        <pre></pre>
                         <div class="color2"></div>
                     </div>
                     <div class="week4">
                         <div class="color1"></div>
+                        <pre></pre>
                         <div class="color2"></div>
                     </div>
                 </div>
@@ -719,6 +731,7 @@
                     <p class="week4">الأسبوع 4</p>
                 </div>
             </div>
+            <!-- summary .caption p -->
             <div class="summary">
                 <div class="caption">
                     <h3>ملخص الحساب</h3>
@@ -757,70 +770,93 @@
                         - 6,000 جنية</div>
                 </div>
             </div>
+            <!-- means caption p -->
             <div class="means">
                 <div class="caption">
                     <h3>وسائل الدفع</h3>
                     <p>إدارة <i class="fa-solid fa-angle-left"></i></p>
                 </div>
-                <div class="card1">
-                    <div class="pictures">
-                        <div class="image1">
-                            <div class="inside"></div>
+
+
+                <div class="card___card-rotate1">
+                    <div class="card1">
+                        <div class="pictures">
+                            <div class="image1">
+                                <div class="inside"></div>
+                            </div>
+                            <div class="image2"><i class="fa-brands fa-cc-visa"></i></div>
                         </div>
-                        <div class="image2"><i class="fa-brands fa-cc-visa"></i></div>
+                        <p class="dot">.... .... ....</p>
+                        <p class="number">4532</p>
+                        <div class="info">
+                            <div class="name">
+                                <p class="who-has">حامل البطاقه</p>
+                                <p>سيف اسامه</p>
+                            </div>
+                            <div class="finishing">
+                                <p class="finish">تنتهي</p>
+                                <p>12/26</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="dot">.... .... ....</p>
-                    <p class="number">4532</p>
-                    <div class="info">
-                        <div class="name">
-                            <p class="who-has">حامل البطاقه</p>
-                            <p>سيف اسامه</p>
-                        </div>
-                        <div class="finishing">
-                            <p class="finish">تنتهي</p>
-                            <p>12/26</p>
-                        </div>
-                    </div>
+
+                    <div class="card1-rotate"></div>
                 </div>
-                <div class="card2">
-                    <div class="pictures">
-                        <div class="image1">
-                            <div class="inside"></div>
+
+
+                <div class="card___card-rotate2">
+                    <div class="card2">
+
+                        <div class="pictures">
+                            <div class="image1">
+                                <div class="inside"></div>
+                            </div>
+                            <div class="image2"><i class="fa-brands fa-cc-mastercard"></i></div>
                         </div>
-                        <div class="image2"><i class="fa-brands fa-cc-mastercard"></i></div>
+                        <p class="dot">.... .... ....</p>
+                        <p class="number">8901</p>
+                        <div class="info">
+                            <div class="name">
+                                <p class="who-has">حامل البطاقه</p>
+                                <p>سيف اسامه</p>
+                            </div>
+                            <div class="finishing">
+                                <p class="finish">تنتهي</p>
+                                <p>08/27</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="dot">.... .... ....</p>
-                    <p class="number">8901</p>
-                    <div class="info">
-                        <div class="name">
-                            <p class="who-has">حامل البطاقه</p>
-                            <p>سيف اسامه</p>
-                        </div>
-                        <div class="finishing">
-                            <p class="finish">تنتهي</p>
-                            <p>08/27</p>
-                        </div>
-                    </div>
+                    <div class="card2-rotate"></div>
                 </div>
-                <div class="card3">
-                    <div class="pictures">
-                        <div class="image1">
-                            <div class="inside"></div>
+
+
+
+
+                <div class="card___card-rotate3">
+                    <div class="card3">
+
+                        <div class="pictures">
+                            <div class="image1">
+                                <div class="inside"></div>
+                            </div>
+                            <div class="image2"><i class="fa-brands fa-paypal"></i></div>
                         </div>
-                        <div class="image2"><i class="fa-brands fa-paypal"></i></div>
+                        <p class="number">حساب Paypal</p>
+                        <div class="info">
+                            <div class="name">
+                                <p class="who-has">الإيميل</p>
+                                <p>seif@example.com</p>
+                            </div>
+                            <div class="finishing">
+                                <p class="finish">الحاله</p>
+                                <p class="trusted">موثق</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="number">حساب Paypal</p>
-                    <div class="info">
-                        <div class="name">
-                            <p class="who-has">الإيميل</p>
-                            <p>seif@example.com</p>
-                        </div>
-                        <div class="finishing">
-                            <p class="finish">الحاله</p>
-                            <p class="trusted">موثق</p>
-                        </div>
-                    </div>
+                    <div class="card3-rotate"></div>
                 </div>
+
+
             </div>
         </div>
     </div>
